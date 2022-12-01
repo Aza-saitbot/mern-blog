@@ -11,7 +11,7 @@ export default (req,res,next)=>{
             const decoded = jwt.verify(token,'secret123')
             //если все хорошо, то сохрани айди
             req.userId = decoded._id
-            // выполняй след функцию
+            // выполняй след функцию/дальше
             next()
 
         }catch (e) {
